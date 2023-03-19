@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block title %}Blog{% endblock %}
+{% block content %}
+<h1>Blog</h1>
+{% for post in posts %}
+<div>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.content }}</p>
+    {% if post.mood %}
+        <p style="color: #349a8f">{{ post.mood }}</p>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block title %}Clicker{% endblock %}
+{% block content %}
+<h1>Clicker</h1>
+<p>Counter: {{ counter }}</p>
+{% if counter % 2 == 0 %}
+<p style="color: green">{{ counter }} - это четное число</p>
+{% else %}
+<p style="color: red">{{ counter }} - это нечетное число</p>
+{% endif %}
+<form method="POST" action="/clicker">
+    <button class="btn btn-primary">Count!</button>
+</form>
+{% endblock %}
